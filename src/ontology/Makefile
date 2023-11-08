@@ -101,6 +101,60 @@ $(IMPORTDIR)/uberon_import.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_term
 		convert --format ofn \
 		--output $@.tmp.owl && mv $@.tmp.owl $@
 
+###### UBERON TESTING #######
+uberon_mireot.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_terms.txt
+	$(ROBOT) \
+		filter \
+			--input $< \
+			--term-file $(word 2, $^) \
+			--select "annotations self ancestors" \
+			--axioms logical \
+			--signature true \
+			--trim true \
+		remove \
+			--select "owl:deprecated='true'^^xsd:boolean" \
+		remove \
+			--select "<http://purl.obolibrary.org/obo/NCBITaxon_*>" \
+		extract --method MIREOT \
+			--branch-from-term "obo:UBERON_0001062" \
+		annotate \
+			--annotate-defined-by true \
+			--ontology-iri $(URIBASE)/$(ONT)/$@ \
+			--version-iri $(URIBASE)/$(ONT)/$@ \
+		convert --format ofn \
+		--output $@.tmp.owl && mv $@.tmp.owl $@
+
+uberon_subset.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_terms.txt
+	$(ROBOT) \
+		filter \
+			--input $< \
+			--term-file $(word 2, $^) \
+			--select "annotations self ancestors" \
+			--axioms logical \
+			--signature true \
+			--trim true \
+		remove \
+			--select "owl:deprecated='true'^^xsd:boolean" \
+		remove \
+			--select "<http://purl.obolibrary.org/obo/NCBITaxon_*>" \
+		extract --method subset \
+			--term-file $(word 2, $^) \
+		annotate \
+			--annotate-defined-by true \
+			--ontology-iri $(URIBASE)/$(ONT)/$@ \
+			--version-iri $(URIBASE)/$(ONT)/$@ \
+		convert --format ofn \
+		--output $@.tmp.owl && mv $@.tmp.owl $@
+
+uberon_merge.owl: uberon_mireot.owl uberon_subset.owl
+	$(ROBOT) \
+		merge \
+			--input $(word 1, $^) \
+			--input $(word 2, $^) \
+			--include-annotations true \
+		convert --format ofn \
+		--output $@.tmp.owl && mv $@.tmp.owl $@
+
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
