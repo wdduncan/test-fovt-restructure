@@ -3,8 +3,9 @@
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/fovtTEST/imports/uberon_import.owl" uri="imports/uberon_import.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/fovtTEST/imports/omo_import.owl" uri="imports/omo_import.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1699453556512" name="http://purl.obolibrary.org/obo/fovt.owl" uri="mirror/fovt.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1699453556512" name="http://purl.obolibrary.org/obo/omo.owl" uri="mirror/omo.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1699453556512" name="http://purl.obolibrary.org/obo/uberon.owl" uri="mirror/uberon.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1699468451521" name="http://purl.obolibrary.org/obo/fovt.owl" uri="mirror/fovt.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1699468451521" name="http://purl.obolibrary.org/obo/omo.owl" uri="mirror/omo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1699468451521" name="http://purl.obolibrary.org/obo/uberon.owl" uri="imports/uberon_filter_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1699468451521" name="shadowed:http://purl.obolibrary.org/obo/uberon.owl" uri="mirror/uberon.owl"/>
     </group>
 </catalog>

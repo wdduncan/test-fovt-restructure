@@ -30,7 +30,7 @@ RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-simple $(ONT)-non-clas
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
-IMPORTS =  omo uberon fovt
+IMPORTS =  omo uberon uberon_filter uberon_mireot uberon_subset fovt
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -80,16 +80,21 @@ $(IMPORTDIR)/omo_import.owl: $(MIRRORDIR)/omo.owl
 	  convert --format ofn \
 	  --output $@.tmp.owl && mv $@.tmp.owl $@
 
-## UBERON
-$(IMPORTDIR)/uberon_import.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_terms.txt
+### UBERON ###
+# This is a multistep process
+# - robot filter to create base ontology used for mireot and subset
+# - robot mireot to extract the anatomical entity branch; this doesn't extract axioms
+# - robot subset is used to get the axioms
+# - merge the meriot and subset ontologies
+
+## UBERON import ontology created by merging mireot and subset
+$(IMPORTDIR)/uberon_import.owl: $(IMPORTDIR)/uberon_mireot.owl $(IMPORTDIR)/uberon_subset.owl
+	@echo "*** building $@ ***"
 	$(ROBOT) \
-		filter \
-			--input $< \
-			--term-file $(word 2, $^) \
-			--select "annotations self ancestors" \
-			--axioms logical \
-			--signature true \
-			--trim true \
+		merge \
+			--input $(word 1, $^) \
+			--input $(word 2, $^) \
+			--include-annotations true \
 		remove \
 			--select "owl:deprecated='true'^^xsd:boolean" \
 		remove \
@@ -101,8 +106,9 @@ $(IMPORTDIR)/uberon_import.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_term
 		convert --format ofn \
 		--output $@.tmp.owl && mv $@.tmp.owl $@
 
-###### UBERON TESTING #######
-uberon_mireot.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_terms.txt
+## UBERON filtered ontology
+$(IMPORTDIR)/uberon_filter_import.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_terms.txt
+	@echo "*** building $@ ***"
 	$(ROBOT) \
 		filter \
 			--input $< \
@@ -111,33 +117,25 @@ uberon_mireot.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_terms.txt
 			--axioms logical \
 			--signature true \
 			--trim true \
-		remove \
-			--select "owl:deprecated='true'^^xsd:boolean" \
-		remove \
-			--select "<http://purl.obolibrary.org/obo/NCBITaxon_*>" \
-		extract --method MIREOT \
+		--output $@.tmp.owl && mv $@.tmp.owl $@
+
+## UBERON mireot ontology
+$(IMPORTDIR)/uberon_mireot.owl: $(IMPORTDIR)/uberon_filter_import.owl
+	@echo "*** building $@ ***"
+	$(ROBOT) \
+		extract \
+			--method MIREOT \
+			--input $< \
 			--branch-from-term "obo:UBERON_0001062" \
-		annotate \
-			--annotate-defined-by true \
-			--ontology-iri $(URIBASE)/$(ONT)/$@ \
-			--version-iri $(URIBASE)/$(ONT)/$@ \
 		convert --format ofn \
 		--output $@.tmp.owl && mv $@.tmp.owl $@
 
-uberon_subset.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_terms.txt
+## UBERON subset ontology
+$(IMPORTDIR)/uberon_subset.owl: $(IMPORTDIR)/uberon_filter_import.owl $(IMPORTDIR)/uberon_terms.txt
+	@echo "*** building $@ ***"
 	$(ROBOT) \
-		filter \
-			--input $< \
-			--term-file $(word 2, $^) \
-			--select "annotations self ancestors" \
-			--axioms logical \
-			--signature true \
-			--trim true \
-		remove \
-			--select "owl:deprecated='true'^^xsd:boolean" \
-		remove \
-			--select "<http://purl.obolibrary.org/obo/NCBITaxon_*>" \
 		extract --method subset \
+			--input $< \
 			--term-file $(word 2, $^) \
 		annotate \
 			--annotate-defined-by true \
@@ -154,6 +152,7 @@ uberon_merge.owl: uberon_mireot.owl uberon_subset.owl
 			--include-annotations true \
 		convert --format ofn \
 		--output $@.tmp.owl && mv $@.tmp.owl $@
+### END UBERON ###
 
 # ----------------------------------------
 # Mirroring upstream ontologies
