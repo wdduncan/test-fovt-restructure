@@ -1,0 +1,8 @@
+# annotations
+RO_0040042     # is homeomorphic for
+RO_0001900     # temporal interpretation
+RO_0002161     # never in taxon
+RO_0002175     # present in taxon
+RO_0002504     # always present in taxon
+RO_0002171     # mutually spatially disjoint with
+RO_0040042     # is homeomorphic for

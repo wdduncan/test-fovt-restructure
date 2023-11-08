@@ -30,7 +30,7 @@ RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-simple $(ONT)-non-clas
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
-IMPORTS =  omo uberon uberon_filter uberon_mireot uberon_subset fovt
+IMPORTS =  omo ro uberon uberon_filter uberon_mireot uberon_subset fovt organism
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -80,6 +80,37 @@ $(IMPORTDIR)/omo_import.owl: $(MIRRORDIR)/omo.owl
 	  convert --format ofn \
 	  --output $@.tmp.owl && mv $@.tmp.owl $@
 
+## RO
+$(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl
+	$(ROBOT) \
+	  remove \
+		--input $< \
+		--select "owl:deprecated='true'^^xsd:boolean" \
+	  remove \
+		--select classes \
+	  annotate \
+		--annotate-defined-by true \
+		--ontology-iri $(URIBASE)/$(ONT)/$@ \
+		--version-iri $(URIBASE)/$(ONT)/$@ \
+	  convert --format ofn \
+	  --output $@.tmp.owl && mv $@.tmp.owl $@
+
+## ORGANSM (extacted from FOVT)
+$(IMPORTDIR)/organism_import.owl: $(MIRRORDIR)/fovt.owl
+	$(ROBOT) \
+	  extract --method MIREOT \
+		--input $< \
+		--branch-from-term OBI:0100026 \
+		--copy-ontology-annotations true \
+	  remove \
+		--select "owl:deprecated='true'^^xsd:boolean" \
+	  annotate \
+		--annotate-defined-by true \
+		--ontology-iri $(URIBASE)/$(ONT)/$@ \
+		--version-iri $(URIBASE)/$(ONT)/$@ \
+	  convert --format ofn \
+	  --output $@.tmp.owl && mv $@.tmp.owl $@
+
 ### UBERON ###
 # This is a multistep process
 # - robot filter to create base ontology used for mireot and subset
@@ -97,7 +128,6 @@ $(IMPORTDIR)/uberon_import.owl: $(IMPORTDIR)/uberon_mireot.owl $(IMPORTDIR)/uber
 			--include-annotations true \
 		remove \
 			--select "owl:deprecated='true'^^xsd:boolean" \
-		remove \
 			--select "<http://purl.obolibrary.org/obo/NCBITaxon_*>" \
 		annotate \
 			--annotate-defined-by true \
@@ -117,6 +147,7 @@ $(IMPORTDIR)/uberon_filter_import.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uber
 			--axioms logical \
 			--signature true \
 			--trim true \
+		convert --format ofn \
 		--output $@.tmp.owl && mv $@.tmp.owl $@
 
 ## UBERON mireot ontology
@@ -127,6 +158,7 @@ $(IMPORTDIR)/uberon_mireot.owl: $(IMPORTDIR)/uberon_filter_import.owl
 			--method MIREOT \
 			--input $< \
 			--branch-from-term "obo:UBERON_0001062" \
+			--copy-ontology-annotations true \
 		convert --format ofn \
 		--output $@.tmp.owl && mv $@.tmp.owl $@
 
@@ -137,21 +169,11 @@ $(IMPORTDIR)/uberon_subset.owl: $(IMPORTDIR)/uberon_filter_import.owl $(IMPORTDI
 		extract --method subset \
 			--input $< \
 			--term-file $(word 2, $^) \
-		annotate \
-			--annotate-defined-by true \
-			--ontology-iri $(URIBASE)/$(ONT)/$@ \
-			--version-iri $(URIBASE)/$(ONT)/$@ \
+		remove \
+			--axioms annotation \
 		convert --format ofn \
 		--output $@.tmp.owl && mv $@.tmp.owl $@
 
-uberon_merge.owl: uberon_mireot.owl uberon_subset.owl
-	$(ROBOT) \
-		merge \
-			--input $(word 1, $^) \
-			--input $(word 2, $^) \
-			--include-annotations true \
-		convert --format ofn \
-		--output $@.tmp.owl && mv $@.tmp.owl $@
 ### END UBERON ###
 
 # ----------------------------------------
