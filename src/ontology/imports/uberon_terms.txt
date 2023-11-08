@@ -1,7 +1,29 @@
+# relations between anatomical entities
 RO:0002215     # capable of
 BFO:0000051    # has part
 BFO:0000050    # part of
+BSPO:0000123   # in anterior side of
+BSPO:0020001   # in central side of
+BSPO:0001101   # in deep part of
+BSPO:0000125   # in distal side of
+BSPO:0001108   # distalmost part of
+BSPO:0015101   # in dorsal side of
+BSPO:0000126   # in lateral side of
+BSPO:0000120   # in left side of
+BSPO:0000121   # in right side of
+http://purl.obolibrary.org/obo/uberon/core#in_innermost_side_of # in_innermost_side_of
+http://purl.obolibrary.org/obo/uberon/core#in_outermost_side_of # in_outermost_side_of
+BSPO:0000122   # in posterior side of
+BSPO:0000124   # in proximal side of
+BSPO:0001106   # proximalmost part of
+BSPO:0001100   # in superficial part of
+BSPO:0015102   # in ventral side of
+BSPO:0005001   # intersects midsagittal plane of
+http://purl.obolibrary.org/obo/uberon/core#layer_part_of # layer part of
+RO:0002571     # lumen of
+RO:0002572     # luminal space of
 
+# anatomical entiies
 UBERON:4200181 # astragulus head
 UBERON:0009678 # tooth row
 UBERON:0002395 # talus
