@@ -2,324 +2,324 @@ RO:0002215     # capable of
 BFO:0000051    # has part
 BFO:0000050    # part of
 
-UBERON:4200181 #astragulus head
-UBERON:0009678 #tooth row
-UBERON:0002395 #talus
-UBERON:0001450 #calcaneus
-UBERON:0015180 #neck of talus
-UBERON:0010724 #lateral tubercle of talus
-UBERON:0000976 #humerus
-UBERON:0004652 #humerus diaphysis
-UBERON:0009988 #condyle of humerus
-UBERON:4200174 #distal condyle of humerus
-UBERON:0000144 #trochlea of humerus
-UBERON:7500061 #trochlear ridge of humerus
-UBERON:3000785 #trochlear groove of humerus
-UBERON:0006801 #proximal head of humerus; caput
-UBERON:0000981 #femur
-UBERON:0006767 #head of femur
-UBERON:0006862 #diaphysis of femur
-UBERON:0009985 #lateral condyle of femur
-UBERON:0009984 #medial condyle of femur
-UBERON:0002503 #greater trochanter
-UBERON:0000979 #tibia
-UBERON:0002504 #lesser trochanter
-UBERON:0011187 #ventral tubercle of humerus
-UBERON:0006333 #snout
-UBERON:1000016 #tip of snout
-UBERON:0012128 #nose tip
-UBERON:0001705 #nail
-UBERON:4100008 #pedal claws
-UBERON:0009567 #nail of pedal digit
-UBERON:0011278 #nail of pedal digit 1
-UBERON:0011279 #nail of pedal digit 2
-UBERON:0011280 #nail of pedal digit 3
-UBERON:0011281 #nail of pedal digit 4
-UBERON:0011282 #nail of pedal digit 5
-UBERON:0001690 #ear
-UBERON:0035295 #left ear
-UBERON:0035174 #right ear
-UBERON:0010887 #tragus
-UBERON:0002488 #helix of outer ear
-UBERON:0036212 #intertragic incisure; notch
-UBERON:0000033 #head
-UBERON:0010162 #post-anal tail tip
-UBERON:0003645 #metacarpal bone of digit 1
-UBERON:0003646 #metacarpal bone of digit 2
-UBERON:0003647 #metacarpal bone of digit 3
-UBERON:0003648 #metacarpal bone of digit 4
-UBERON:0003649 #metacarpal bone of digit 5
-UBERON:0013587 #fused metacarpal bones 3 and 4
-UBERON:0014763 #fused metatarsal bones 2-4
-UBERON:0013588 #fused metatarsal bones 3 and 4
-UBERON:0003650 #metatarsal bone of digit 1
-UBERON:0003651 #metatarsal bone of digit 2
-UBERON:0003652 #metatarsal bone of digit 3
-UBERON:0003653 #metatarsal bone of digit 4
-UBERON:0003654 #metatarsal bone of digit 5
-UBERON:0014762 #fused metapodial bones 2-4
-UBERON:0013586 #fused metapodial bones 3 and 4
-UBERON:0013581 #metapodium bone 1
-UBERON:0013582 #metapodium bone 2
-UBERON:0013583 #metapodium bone 3
-UBERON:0013584 #metapodium bone 4
-UBERON:0013585 #metapodium bone 5
-UBERON:0001098 #incisor tooth
-UBERON:0018551 #central incisor tooth
-UBERON:0018552 #lateral incisor tooth
-UBERON:0003451 #lower jaw incisor
-UBERON:0001710 #lower jaw region
-UBERON:0001709 #upper jaw region
-UBERON:0003450 #upper jaw incisor
-UBERON:0018602 #lower lateral incisor tooth
-UBERON:0018601 #lower central incisor tooth
-UBERON:0019253 #primary incisor tooth
+UBERON:4200181 # astragulus head
+UBERON:0009678 # tooth row
+UBERON:0002395 # talus
+UBERON:0001450 # calcaneus
+UBERON:0015180 # neck of talus
+UBERON:0010724 # lateral tubercle of talus
+UBERON:0000976 # humerus
+UBERON:0004652 # humerus diaphysis
+UBERON:0009988 # condyle of humerus
+UBERON:4200174 # distal condyle of humerus
+UBERON:0000144 # trochlea of humerus
+UBERON:7500061 # trochlear ridge of humerus
+UBERON:3000785 # trochlear groove of humerus
+UBERON:0006801 # proximal head of humerus; caput
+UBERON:0000981 # femur
+UBERON:0006767 # head of femur
+UBERON:0006862 # diaphysis of femur
+UBERON:0009985 # lateral condyle of femur
+UBERON:0009984 # medial condyle of femur
+UBERON:0002503 # greater trochanter
+UBERON:0000979 # tibia
+UBERON:0002504 # lesser trochanter
+UBERON:0011187 # ventral tubercle of humerus
+UBERON:0006333 # snout
+UBERON:1000016 # tip of snout
+UBERON:0012128 # nose tip
+UBERON:0001705 # nail
+UBERON:4100008 # pedal claws
+UBERON:0009567 # nail of pedal digit
+UBERON:0011278 # nail of pedal digit 1
+UBERON:0011279 # nail of pedal digit 2
+UBERON:0011280 # nail of pedal digit 3
+UBERON:0011281 # nail of pedal digit 4
+UBERON:0011282 # nail of pedal digit 5
+UBERON:0001690 # ear
+UBERON:0035295 # left ear
+UBERON:0035174 # right ear
+UBERON:0010887 # tragus
+UBERON:0002488 # helix of outer ear
+UBERON:0036212 # intertragic incisure; notch
+UBERON:0000033 # head
+UBERON:0010162 # post-anal tail tip
+UBERON:0003645 # metacarpal bone of digit 1
+UBERON:0003646 # metacarpal bone of digit 2
+UBERON:0003647 # metacarpal bone of digit 3
+UBERON:0003648 # metacarpal bone of digit 4
+UBERON:0003649 # metacarpal bone of digit 5
+UBERON:0013587 # fused metacarpal bones 3 and 4
+UBERON:0014763 # fused metatarsal bones 2-4
+UBERON:0013588 # fused metatarsal bones 3 and 4
+UBERON:0003650 # metatarsal bone of digit 1
+UBERON:0003651 # metatarsal bone of digit 2
+UBERON:0003652 # metatarsal bone of digit 3
+UBERON:0003653 # metatarsal bone of digit 4
+UBERON:0003654 # metatarsal bone of digit 5
+UBERON:0014762 # fused metapodial bones 2-4
+UBERON:0013586 # fused metapodial bones 3 and 4
+UBERON:0013581 # metapodium bone 1
+UBERON:0013582 # metapodium bone 2
+UBERON:0013583 # metapodium bone 3
+UBERON:0013584 # metapodium bone 4
+UBERON:0013585 # metapodium bone 5
+UBERON:0001098 # incisor tooth
+UBERON:0018551 # central incisor tooth
+UBERON:0018552 # lateral incisor tooth
+UBERON:0003451 # lower jaw incisor
+UBERON:0001710 # lower jaw region
+UBERON:0001709 # upper jaw region
+UBERON:0003450 # upper jaw incisor
+UBERON:0018602 # lower lateral incisor tooth
+UBERON:0018601 # lower central incisor tooth
+UBERON:0019253 # primary incisor tooth
 UBERON:0018603 $upper central incisor tooth
-UBERON:0016454 #upper central secondary incisor tooth
-UBERON:0018604 #upper lateral incisor tooth
-UBERON:0016455 #upper lateral secondary incisor tooth
-UBERON:0019253 #upper secondary incisor tooth
-UBERON:0018550 #secondary incisor tooth
-UBERON:0003674 #cuspid
-UBERON:0018622 #lower canine tooth
-UBERON:0018583 #primary canine tooth
-UBERON:0018584 #secondary canine tooth
-UBERON:0018621 #upper canine tooth
-UBERON:0018598 #lower primary canine tooth
-UBERON:0018562 #lower secondary canine tooth
-UBERON:0018597 #upper primary canine tooth
-UBERON:0018561 #upper secondary canine tooth
-UBERON:0018300 #upper canine 1
-UBERON:0003655 #molar tooth
-UBERON:0003667 #lower jaw molar
-UBERON:0003666 #upper jaw molar
-UBERON:0018376 #molar tooth 1
-UBERON:0018644 #deciduous molar tooth 1
-UBERON:0018589 #lower first primary molar tooth
-UBERON:0018588 #upper first primary molar tooth
-UBERON:0018608 #permanent molar tooth 1
-UBERON:0018578 #lower first secondary molar tooth
-UBERON:0018575 #upper first secondary molar tooth
-UBERON:0018302 #upper molar 1
-UBERON:0018606 #molar tooth 2
-UBERON:0018643 #deciduous molar tooth 2
-UBERON:0018600 #lower second primary molar tooth
-UBERON:0018599 #upper second primary molar tooth
-UBERON:0018607 #permanent molar tooth 2
-UBERON:0018579 #lower second secondary molar tooth
-UBERON:0018576 #upper second secondary molar tooth
-UBERON:0018377 #molar tooth 3
-UBERON:0018282 #lower molar 3
-UBERON:0018580 #lower third secondary molar tooth
-UBERON:0018577 #upper third secondary molar tooth
-UBERON:7500055 #molar tooth 4
-UBERON:0013616 #primary molar tooth
-UBERON:0013618 #secondary molar tooth
-UBERON:0007120 #premolar tooth
-UBERON:0016943 #lower premolar tooth
-UBERON:0016944 #upper premolar tooth
-UBERON:0017270 #secondary premolar tooth
-UBERON:0017269 #primary premolar tooth
-UBERON:0018294 #premolar 1
-UBERON:0018573 #lower first secondary premolar tooth
-UBERON:0018571 #upper first secondary premolar tooth
-UBERON:0018284 #lower premolar 1
-UBERON:0018640 #premolar 2
-UBERON:0018285 #lower premolar 2
-UBERON:0018574 #lower second secondary premolar tooth
-UBERON:0018572 #upper second secondary premolar tooth
-UBERON:7500056 #premolar 3
-UBERON:0018647 #premolar 4
-UBERON:7500053 #lower fourth secondary premolar tooth
-UBERON:0018648 #upper premolar tooth
-UBERON:0018646 #premolar tooth 5
-UBERON:0018375 #deciduous premolar 5
-UBERON:0018281 #lower deciduous premolar 5
-UBERON:0018301 #upper deciduous premolar 5
-UBERON:0009678 #tooth row
-UBERON:0003675 #tooth crown
-UBERON:0003955 #molar crown
-UBERON:0000991 #gonad
-UBERON:0000992 #ovary
-UBERON:0002119 #left ovary
-UBERON:0002118 #right ovary
-UBERON:0000473 #testis
-UBERON:0004533 #left testis
-UBERON:0004534 #right testis
-UBERON:4200204 #humeral facet on radius
-UBERON:4200203 #humeral facet on ulna
-UBERON:0001423 #radius bone
-UBERON:0001012 #head of radius
-UBERON:0000199 #neck of radius
-UBERON:3000840 #capitulum of radius
-UBERON:0001028 #diaphysis of radius
-UBERON:0004385 #epiphysis of radius
-UBERON:0004407 #distal epiphysis of radius
-UBERON:0004413 #proximal epiphysis of radius
-UBERON:0001424 #ulna
-UBERON:3000784 #ulnar condyle
-UBERON:0011968 #radio-carpal joint
-UBERON:0001446 #fibula
-UBERON:0002446 #patella
-UBERON:0006849 #scapula
-UBERON:0018667 #neck of scapula
-UBERON:0006657 #glenoid cavity
-UBERON:0004651 #scapula spine
-UBERON:0002097 #skin of body
-UBERON:0006810 #olecranon
-UBERON:0004771 #posterior nasal aperture
-UBERON:0002396 #vomer
-UBERON:0012074 #bony part of hard palate
-UBERON:0002517 #basicranium
-UBERON:0001682 #palatine bone
-UBERON:7500105 #coracoid process of calcaneus
-UBERON:7500094 #tubercle of calcaneus
-UBERON:7500080 #articular surface for carpals
-UBERON:7500079 #ulnar notch of radius
-UBERON:7500078 #radius styloid process
-UBERON:0001681 #nasal bone
-UBERON:0002500 #zygomatic arch
-UBERON:0004865 #tetrapod parietal bone
-UBERON:7500101 #antorbital notch
-UBERON:7500071 #rostrum
-UBERON:7500063 #trochlea of talus
-UBERON:7500070 #sulcus tali
-UBERON:7500077 #trochlea of femur, patellar surface
-UBERON:7500064 #trochlear groove of talus
-UBERON:7500068 #ridge of medial condyle of talus; parent terms medial condyle of talus and condyle of talus
-UBERON:7500069 #ridge of lateral condyle of talus; parent terms lateral condyle of talus and condyle of talus
-UBERON:7500089 #posterior facet for talus of calcaneus
-UBERON:7500091 #middle articular facet for talus of calcaneum
-UBERON:7500092 #anterior articular  facet for talus of calcaneum
-UBERON:7500093 #calcaneal body
-UBERON:7500095 #lateral tubercle of calcaneus; parent term tubercle of calcaneus
-UBERON:7500096 #medial tubercle of calcaneus; parent term tubercle of calcaneus
-UBERON:3000467 #preorbital process of the pars facialis of the maxilla
-UBERON:2001783 #supraoccipital crest
-UBERON:0003687 #foramen magnum
-UBERON:0013463 #temporal fossa
-http://xmlns.com/foaf/0.1/depicted_by #depicted_by
-UBERON:0002517 #basicranium
-UBERON:0011156 #viscerocranium
-UBERON:0001703 #neurocranium
-UBERON:0006970 #body core of horn
-UBERON:0003699 #pubic symphysis
-UBERON:3000774 #ilial shaft
-UBERON:0006803 #obturator foramen
-UBERON:0006802 #acetabular rim
-UBERON:0034983 #ischial tuberosity
-UBERON:0012111 #diastema
-UBERON:0006967 #horn
-UBERON:7500115 #sagittal crest
-UBERON:0013447 #sagittal crest of skull
-UBERON:7500109 #basion
-UBERON:7500110 #synsphenion
-UBERON:7500111 #intersphenoid suture
-UBERON:7500108 #cheek tooth
-UBERON:7500114 #cheek tooth row
-UBERON:7500112 #prosthion
-UBERON:7500113 #akrokranion
-UBERON:7500106 #hormion
-UBERON:7500107 #sphenovomerine suture
-UBERON:7500117 #opisthocranion
-UBERON:7500119 #ectorbitale
-UBERON:7500120 #zygion
-UBERON:7500121 #paroccipital process
-UBERON:0018143 #transverse process of cervical vertebra
-UBERON:0002413 #cervical vertebra
-UBERON:0001092 #vertebral bone 1
-UBERON:0001093 #vertebral bone 2
-UBERON:0005814 #arch of atlas
-UBERON:2001984 #centrum 2
-UBERON:0000218 #vertebral arch of axis
-UBERON:0012290 #fused carpal bones 2 and 3
-UBERON:0013774 #diaphysis of metatarsal bone
-UBERON:0013752 #diaphysis of metacarpal bone
-UBERON:0001451 #navicular bone of pes
-UBERON:0004338 #proximal phalanx of manual digit 1
-UBERON:0004445 #proximal epiphysis of proximal phalanx of manual digit 1
-UBERON:0004337 #distal phalanx of manual digit 1
-UBERON:0014881 #distal epiphysis of distal phalanx of manual digit 1
-UBERON:0004444 #proximal epiphysis of distal phalanx of manual digit 1
-UBERON:4200219 #middle phalanx of manual digit 1
-UBERON:0004332 #proximal phalanx of pedal digit 1
-UBERON:0004315 #distal phalanx of pedal digit 1
-UBERON:0014871 #distal epiphysis of distal phalanx of pedal digit 1
-UBERON:0004328 #proximal phalanx of manual digit 2
-UBERON:0004440 #proximal epiphysis of proximal phalanx of manual digit 2
-UBERON:0004311 #distal phalanx of manual digit 2
-UBERON:0014882 #distal epiphysis of distal phalanx of manual digit 2
-UBERON:0004432 #proximal epiphysis of distal phalanx of manual digit 2
-UBERON:0004320 #middle phalanx of manual digit 2
-UBERON:0004333 #proximal phalanx of pedal digit 2
-UBERON:0004316 #distal phalanx of pedal digit 2
-UBERON:0014872 #distal epiphysis of distal phalanx of pedal digit 2
-UBERON:0004324 #middle phalanx of pedal digit 2
-UBERON:0004312 #distal phalanx of manual digit 3
-UBERON:0004317 #distal phalanx of pedal digit 3
-UBERON:0004321 #middle phalanx of manual digit 3
-UBERON:0004325 #middle phalanx of pedal digit 3
-UBERON:0004329 #proximal phalanx of manual digit 3
-UBERON:0004334 #proximal phalanx of pedal digit 3
-UBERON:0014883 #distal epiphysis of distal phalanx of manual digit 3
-UBERON:0004433 #proximal epiphysis of distal phalanx of manual digit 3
-UBERON:0014873 #distal epiphysis of distal phalanx of pedal digit 3
-UBERON:0004437 #proximal epiphysis of middle phalanx of manual digit 3
-UBERON:0004441 #proximal epiphysis of proximal phalanx of manual digit 3
-UBERON:0004330 #proximal phalanx of manual digit 4
-UBERON:0004442 #proximal epiphysis of proximal phalanx of manual digit 4
-UBERON:0004313 #distal phalanx of manual digit 4
-UBERON:0014884 #distal epiphysis of distal phalanx of manual digit 4
-UBERON:0004434 #proximal epiphysis of distal phalanx of manual digit 4
-UBERON:0004322 #middle phalanx of manual digit 4
-UBERON:0004335 #proximal phalanx of pedal digit 4
-UBERON:0004318 #distal phalanx of pedal digit 4
-UBERON:0014874 #distal epiphysis of distal phalanx of pedal digit 4
-UBERON:0004326 #middle phalanx of pedal digit 4
-UBERON:0004331 #proximal phalanx of manual digit 5
-UBERON:0004443 #proximal epiphysis of proximal phalanx of manual digit 5
-UBERON:0004314 #distal phalanx of manual digit 5
-UBERON:0014885 #distal epiphysis of distal phalanx of manual digit 5
-UBERON:0004435 #proximal epiphysis of distal phalanx of manual digit 5
-UBERON:0004323 #middle phalanx of manual digit 5
-UBERON:0004336 #proximal phalanx of pedal digit 5
-UBERON:0004319 #distal phalanx of pedal digit 5
-UBERON:0014875 #distal epiphysis of distal phalanx of pedal digit 5
-UBERON:0004327 #middle phalanx of pedal digit 5
-UBERON:0003690 #fused sacrum
-UBERON:0001094 #sacral vertebra
-UBERON:0004622 #sacral vertebra 1
-UBERON:0004623 #sacral vertebra 2
-UBERON:0004624 #sacral vertebra 3
-UBERON:0004625 #sacral vertebra 4
-UBERON:0008457 #prezygapophysis of sacral vertebra
-UBERON:0004626 #thoracic vertebra 1
-UBERON:0004627 #thoracic vertebra 2
-UBERON:0004628 #thoracic vertebra 3
-UBERON:0004629 #thoracic vertebra 4
-UBERON:0004630 #thoracic vertebra 5
-UBERON:0004631 #thoracic vertebra 6
-UBERON:0004632 #thoracic vertebra 7
-UBERON:0011050 #thoracic vertebra 8
-UBERON:0004633 #thoracic vertebra 9
-UBERON:0004634 #thoracic vertebra 10
-UBERON:0004635 #thoracic vertebra 11
-UBERON:0004636 #thoracic vertebra 12
-UBERON:0008463 #postzygapophysis of thoracic vertebra
-UBERON:0008460 #prezygapophysis of thoracic vertebra
-UBERON:0004617 #lumbar vertebra 1
-UBERON:0004618 #lumbar vertebra 2
-UBERON:0004619 #lumbar vertebra 3
-UBERON:0004620 #lumbar vertebra 4
-UBERON:0004621 #lumbar vertebra 5
-UBERON:0008461 #postzygapophysis of lumbar vertebra
-UBERON:0008456 #prezygapophysis of lumbar vertebra
-UBERON:0018146 #transverse process of lumbar vertebra
-UBERON:0004612 #mammalian cervical vertebra 3
-UBERON:0004613 #mammalian cervical vertebra 4
-UBERON:0004614 #mammalian cervical vertebra 5
-UBERON:0004615 #mammalian cervical vertebra 6
-UBERON:0004616 #mammalian cervical vertebra 7
-UBERON:0008462 #postzygapophysis of cervical vertebra
-UBERON:0008459 #prezygapophysis of cervical vertebra
-UBERON:0018143 #transverse process of cervical vertebra
+UBERON:0016454 # upper central secondary incisor tooth
+UBERON:0018604 # upper lateral incisor tooth
+UBERON:0016455 # upper lateral secondary incisor tooth
+UBERON:0019253 # upper secondary incisor tooth
+UBERON:0018550 # secondary incisor tooth
+UBERON:0003674 # cuspid
+UBERON:0018622 # lower canine tooth
+UBERON:0018583 # primary canine tooth
+UBERON:0018584 # secondary canine tooth
+UBERON:0018621 # upper canine tooth
+UBERON:0018598 # lower primary canine tooth
+UBERON:0018562 # lower secondary canine tooth
+UBERON:0018597 # upper primary canine tooth
+UBERON:0018561 # upper secondary canine tooth
+UBERON:0018300 # upper canine 1
+UBERON:0003655 # molar tooth
+UBERON:0003667 # lower jaw molar
+UBERON:0003666 # upper jaw molar
+UBERON:0018376 # molar tooth 1
+UBERON:0018644 # deciduous molar tooth 1
+UBERON:0018589 # lower first primary molar tooth
+UBERON:0018588 # upper first primary molar tooth
+UBERON:0018608 # permanent molar tooth 1
+UBERON:0018578 # lower first secondary molar tooth
+UBERON:0018575 # upper first secondary molar tooth
+UBERON:0018302 # upper molar 1
+UBERON:0018606 # molar tooth 2
+UBERON:0018643 # deciduous molar tooth 2
+UBERON:0018600 # lower second primary molar tooth
+UBERON:0018599 # upper second primary molar tooth
+UBERON:0018607 # permanent molar tooth 2
+UBERON:0018579 # lower second secondary molar tooth
+UBERON:0018576 # upper second secondary molar tooth
+UBERON:0018377 # molar tooth 3
+UBERON:0018282 # lower molar 3
+UBERON:0018580 # lower third secondary molar tooth
+UBERON:0018577 # upper third secondary molar tooth
+UBERON:7500055 # molar tooth 4
+UBERON:0013616 # primary molar tooth
+UBERON:0013618 # secondary molar tooth
+UBERON:0007120 # premolar tooth
+UBERON:0016943 # lower premolar tooth
+UBERON:0016944 # upper premolar tooth
+UBERON:0017270 # secondary premolar tooth
+UBERON:0017269 # primary premolar tooth
+UBERON:0018294 # premolar 1
+UBERON:0018573 # lower first secondary premolar tooth
+UBERON:0018571 # upper first secondary premolar tooth
+UBERON:0018284 # lower premolar 1
+UBERON:0018640 # premolar 2
+UBERON:0018285 # lower premolar 2
+UBERON:0018574 # lower second secondary premolar tooth
+UBERON:0018572 # upper second secondary premolar tooth
+UBERON:7500056 # premolar 3
+UBERON:0018647 # premolar 4
+UBERON:7500053 # lower fourth secondary premolar tooth
+UBERON:0018648 # upper premolar tooth
+UBERON:0018646 # premolar tooth 5
+UBERON:0018375 # deciduous premolar 5
+UBERON:0018281 # lower deciduous premolar 5
+UBERON:0018301 # upper deciduous premolar 5
+UBERON:0009678 # tooth row
+UBERON:0003675 # tooth crown
+UBERON:0003955 # molar crown
+UBERON:0000991 # gonad
+UBERON:0000992 # ovary
+UBERON:0002119 # left ovary
+UBERON:0002118 # right ovary
+UBERON:0000473 # testis
+UBERON:0004533 # left testis
+UBERON:0004534 # right testis
+UBERON:4200204 # humeral facet on radius
+UBERON:4200203 # humeral facet on ulna
+UBERON:0001423 # radius bone
+UBERON:0001012 # head of radius
+UBERON:0000199 # neck of radius
+UBERON:3000840 # capitulum of radius
+UBERON:0001028 # diaphysis of radius
+UBERON:0004385 # epiphysis of radius
+UBERON:0004407 # distal epiphysis of radius
+UBERON:0004413 # proximal epiphysis of radius
+UBERON:0001424 # ulna
+UBERON:3000784 # ulnar condyle
+UBERON:0011968 # radio-carpal joint
+UBERON:0001446 # fibula
+UBERON:0002446 # patella
+UBERON:0006849 # scapula
+UBERON:0018667 # neck of scapula
+UBERON:0006657 # glenoid cavity
+UBERON:0004651 # scapula spine
+UBERON:0002097 # skin of body
+UBERON:0006810 # olecranon
+UBERON:0004771 # posterior nasal aperture
+UBERON:0002396 # vomer
+UBERON:0012074 # bony part of hard palate
+UBERON:0002517 # basicranium
+UBERON:0001682 # palatine bone
+UBERON:7500105 # coracoid process of calcaneus
+UBERON:7500094 # tubercle of calcaneus
+UBERON:7500080 # articular surface for carpals
+UBERON:7500079 # ulnar notch of radius
+UBERON:7500078 # radius styloid process
+UBERON:0001681 # nasal bone
+UBERON:0002500 # zygomatic arch
+UBERON:0004865 # tetrapod parietal bone
+UBERON:7500101 # antorbital notch
+UBERON:7500071 # rostrum
+UBERON:7500063 # trochlea of talus
+UBERON:7500070 # sulcus tali
+UBERON:7500077 # trochlea of femur, patellar surface
+UBERON:7500064 # trochlear groove of talus
+UBERON:7500068 # ridge of medial condyle of talus; parent terms medial condyle of talus and condyle of talus
+UBERON:7500069 # ridge of lateral condyle of talus; parent terms lateral condyle of talus and condyle of talus
+UBERON:7500089 # posterior facet for talus of calcaneus
+UBERON:7500091 # middle articular facet for talus of calcaneum
+UBERON:7500092 # anterior articular  facet for talus of calcaneum
+UBERON:7500093 # calcaneal body
+UBERON:7500095 # lateral tubercle of calcaneus; parent term tubercle of calcaneus
+UBERON:7500096 # medial tubercle of calcaneus; parent term tubercle of calcaneus
+UBERON:3000467 # preorbital process of the pars facialis of the maxilla
+UBERON:2001783 # supraoccipital crest
+UBERON:0003687 # foramen magnum
+UBERON:0013463 # temporal fossa
+http://xmlns.com/foaf/0.1/depicted_by # depicted_by
+UBERON:0002517 # basicranium
+UBERON:0011156 # viscerocranium
+UBERON:0001703 # neurocranium
+UBERON:0006970 # body core of horn
+UBERON:0003699 # pubic symphysis
+UBERON:3000774 # ilial shaft
+UBERON:0006803 # obturator foramen
+UBERON:0006802 # acetabular rim
+UBERON:0034983 # ischial tuberosity
+UBERON:0012111 # diastema
+UBERON:0006967 # horn
+UBERON:7500115 # sagittal crest
+UBERON:0013447 # sagittal crest of skull
+UBERON:7500109 # basion
+UBERON:7500110 # synsphenion
+UBERON:7500111 # intersphenoid suture
+UBERON:7500108 # cheek tooth
+UBERON:7500114 # cheek tooth row
+UBERON:7500112 # prosthion
+UBERON:7500113 # akrokranion
+UBERON:7500106 # hormion
+UBERON:7500107 # sphenovomerine suture
+UBERON:7500117 # opisthocranion
+UBERON:7500119 # ectorbitale
+UBERON:7500120 # zygion
+UBERON:7500121 # paroccipital process
+UBERON:0018143 # transverse process of cervical vertebra
+UBERON:0002413 # cervical vertebra
+UBERON:0001092 # vertebral bone 1
+UBERON:0001093 # vertebral bone 2
+UBERON:0005814 # arch of atlas
+UBERON:2001984 # centrum 2
+UBERON:0000218 # vertebral arch of axis
+UBERON:0012290 # fused carpal bones 2 and 3
+UBERON:0013774 # diaphysis of metatarsal bone
+UBERON:0013752 # diaphysis of metacarpal bone
+UBERON:0001451 # navicular bone of pes
+UBERON:0004338 # proximal phalanx of manual digit 1
+UBERON:0004445 # proximal epiphysis of proximal phalanx of manual digit 1
+UBERON:0004337 # distal phalanx of manual digit 1
+UBERON:0014881 # distal epiphysis of distal phalanx of manual digit 1
+UBERON:0004444 # proximal epiphysis of distal phalanx of manual digit 1
+UBERON:4200219 # middle phalanx of manual digit 1
+UBERON:0004332 # proximal phalanx of pedal digit 1
+UBERON:0004315 # distal phalanx of pedal digit 1
+UBERON:0014871 # distal epiphysis of distal phalanx of pedal digit 1
+UBERON:0004328 # proximal phalanx of manual digit 2
+UBERON:0004440 # proximal epiphysis of proximal phalanx of manual digit 2
+UBERON:0004311 # distal phalanx of manual digit 2
+UBERON:0014882 # distal epiphysis of distal phalanx of manual digit 2
+UBERON:0004432 # proximal epiphysis of distal phalanx of manual digit 2
+UBERON:0004320 # middle phalanx of manual digit 2
+UBERON:0004333 # proximal phalanx of pedal digit 2
+UBERON:0004316 # distal phalanx of pedal digit 2
+UBERON:0014872 # distal epiphysis of distal phalanx of pedal digit 2
+UBERON:0004324 # middle phalanx of pedal digit 2
+UBERON:0004312 # distal phalanx of manual digit 3
+UBERON:0004317 # distal phalanx of pedal digit 3
+UBERON:0004321 # middle phalanx of manual digit 3
+UBERON:0004325 # middle phalanx of pedal digit 3
+UBERON:0004329 # proximal phalanx of manual digit 3
+UBERON:0004334 # proximal phalanx of pedal digit 3
+UBERON:0014883 # distal epiphysis of distal phalanx of manual digit 3
+UBERON:0004433 # proximal epiphysis of distal phalanx of manual digit 3
+UBERON:0014873 # distal epiphysis of distal phalanx of pedal digit 3
+UBERON:0004437 # proximal epiphysis of middle phalanx of manual digit 3
+UBERON:0004441 # proximal epiphysis of proximal phalanx of manual digit 3
+UBERON:0004330 # proximal phalanx of manual digit 4
+UBERON:0004442 # proximal epiphysis of proximal phalanx of manual digit 4
+UBERON:0004313 # distal phalanx of manual digit 4
+UBERON:0014884 # distal epiphysis of distal phalanx of manual digit 4
+UBERON:0004434 # proximal epiphysis of distal phalanx of manual digit 4
+UBERON:0004322 # middle phalanx of manual digit 4
+UBERON:0004335 # proximal phalanx of pedal digit 4
+UBERON:0004318 # distal phalanx of pedal digit 4
+UBERON:0014874 # distal epiphysis of distal phalanx of pedal digit 4
+UBERON:0004326 # middle phalanx of pedal digit 4
+UBERON:0004331 # proximal phalanx of manual digit 5
+UBERON:0004443 # proximal epiphysis of proximal phalanx of manual digit 5
+UBERON:0004314 # distal phalanx of manual digit 5
+UBERON:0014885 # distal epiphysis of distal phalanx of manual digit 5
+UBERON:0004435 # proximal epiphysis of distal phalanx of manual digit 5
+UBERON:0004323 # middle phalanx of manual digit 5
+UBERON:0004336 # proximal phalanx of pedal digit 5
+UBERON:0004319 # distal phalanx of pedal digit 5
+UBERON:0014875 # distal epiphysis of distal phalanx of pedal digit 5
+UBERON:0004327 # middle phalanx of pedal digit 5
+UBERON:0003690 # fused sacrum
+UBERON:0001094 # sacral vertebra
+UBERON:0004622 # sacral vertebra 1
+UBERON:0004623 # sacral vertebra 2
+UBERON:0004624 # sacral vertebra 3
+UBERON:0004625 # sacral vertebra 4
+UBERON:0008457 # prezygapophysis of sacral vertebra
+UBERON:0004626 # thoracic vertebra 1
+UBERON:0004627 # thoracic vertebra 2
+UBERON:0004628 # thoracic vertebra 3
+UBERON:0004629 # thoracic vertebra 4
+UBERON:0004630 # thoracic vertebra 5
+UBERON:0004631 # thoracic vertebra 6
+UBERON:0004632 # thoracic vertebra 7
+UBERON:0011050 # thoracic vertebra 8
+UBERON:0004633 # thoracic vertebra 9
+UBERON:0004634 # thoracic vertebra 10
+UBERON:0004635 # thoracic vertebra 11
+UBERON:0004636 # thoracic vertebra 12
+UBERON:0008463 # postzygapophysis of thoracic vertebra
+UBERON:0008460 # prezygapophysis of thoracic vertebra
+UBERON:0004617 # lumbar vertebra 1
+UBERON:0004618 # lumbar vertebra 2
+UBERON:0004619 # lumbar vertebra 3
+UBERON:0004620 # lumbar vertebra 4
+UBERON:0004621 # lumbar vertebra 5
+UBERON:0008461 # postzygapophysis of lumbar vertebra
+UBERON:0008456 # prezygapophysis of lumbar vertebra
+UBERON:0018146 # transverse process of lumbar vertebra
+UBERON:0004612 # mammalian cervical vertebra 3
+UBERON:0004613 # mammalian cervical vertebra 4
+UBERON:0004614 # mammalian cervical vertebra 5
+UBERON:0004615 # mammalian cervical vertebra 6
+UBERON:0004616 # mammalian cervical vertebra 7
+UBERON:0008462 # postzygapophysis of cervical vertebra
+UBERON:0008459 # prezygapophysis of cervical vertebra
+UBERON:0018143 # transverse process of cervical vertebra
