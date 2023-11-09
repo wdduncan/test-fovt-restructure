@@ -1,2 +1,11 @@
-BCO:0000003 #observing process
-NCBITaxon:33208 #vertebrate organism
+# properties
+OBI:0000293     # has_specified_input
+OBI:0000299     # has_specified_output
+RO:0002233      # has input
+RO:0002234      # has output
+
+# classes
+BFO:0000040     # material entity
+BFO:0000015     # process
+OBI:0000659     # specimen collection process
+BCO:0000003     # observing process

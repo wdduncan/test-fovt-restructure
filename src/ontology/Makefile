@@ -30,7 +30,7 @@ RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-simple $(ONT)-non-clas
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
-IMPORTS =  omo ro uberon uberon_filter uberon_mireot uberon_subset fovt organism bspo
+IMPORTS =  omo ro uberon uberon_filter uberon_mireot uberon_subset fovt organism bspo bco
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -112,32 +112,31 @@ $(IMPORTDIR)/organism_import.owl: $(MIRRORDIR)/fovt.owl
 	  --output $@.tmp.owl && mv $@.tmp.owl $@
 
 ## BSPO
-# - BSPO:0000051 'anatomical gradient'
-# - CARO:0000003 'connected anatomical structure'
-# - CARO:0000010 'anatomical boundary'
-# - CARO:0000008 'anatomical line'
-
-# extract --method TOP \
-# 	--input $< \
-# 	--term BSPO:0000051 \
-# 	--term CARO:0000003 \
-# 	--term CARO:0000010 \
-# 	--term CARO:0000008 \
-
-# extract --method MIREOT \
-# 	--input $< \
-# 	--branch-from-term BSPO:0000051 \
-# 	--branch-from-term CARO:0000003 \
-# 	--branch-from-term CARO:0000010 \
-# 	--branch-from-term CARO:0000008 \
-# 	--copy-ontology-annotations true \
-
 $(IMPORTDIR)/bspo_import.owl: $(MIRRORDIR)/bspo.owl $(IMPORTDIR)/bspo_terms.txt
 	$(ROBOT) \
 	    filter \
 			--input $< \
 			--term-file $(word 2, $^) \
 			--select "annotations self descendants" \
+			--axioms logical \
+			--signature true \
+			--trim true \
+		remove \
+			--select "owl:deprecated='true'^^xsd:boolean" \
+	    annotate \
+			--annotate-defined-by true \
+			--ontology-iri $(URIBASE)/$(ONT)/$@ \
+			--version-iri $(URIBASE)/$(ONT)/$@ \
+		convert --format ofn \
+		--output $@.tmp.owl && mv $@.tmp.owl $@
+
+## BCO
+$(IMPORTDIR)/bco_import.owl: $(MIRRORDIR)/bco.owl $(IMPORTDIR)/bco_terms.txt
+	$(ROBOT) \
+	    filter \
+			--input $< \
+			--term-file $(word 2, $^) \
+			--select "annotations self" \
 			--axioms logical \
 			--signature true \
 			--trim true \
@@ -237,6 +236,7 @@ $(MIRRORDIR)/%.owl:
 # ----------------------------------------
 # Queries
 # ----------------------------------------
+
 .PHONY: bspo_caro_terms
 # used to help retrieve the terms list for bspo_terms.txt
 bspo_caro_terms:

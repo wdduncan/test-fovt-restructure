@@ -7,6 +7,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fovtTEST.owl>
+Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/bco_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/bspo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/omo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/organism_import.owl>)
@@ -24,6 +25,10 @@ SubClassOf(<http://purl.obolibrary.org/obo/CARO_0000003> <http://purl.obolibrary
 # Class: <http://purl.obolibrary.org/obo/CARO_0000008> (anatomical line)
 
 SubClassOf(<http://purl.obolibrary.org/obo/CARO_0000008> <http://purl.obolibrary.org/obo/UBERON_0000466>)
+
+# Class: <http://purl.obolibrary.org/obo/CARO_0000010> (anatomical boundary)
+
+SubClassOf(<http://purl.obolibrary.org/obo/CARO_0000010> <http://purl.obolibrary.org/obo/UBERON_0000466>)
 
 
 )
