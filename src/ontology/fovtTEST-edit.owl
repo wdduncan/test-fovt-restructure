@@ -9,14 +9,22 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Ontology(<http://purl.obolibrary.org/obo/fovtTEST.owl>
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/bco_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/bspo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/characteristic_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/omo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/organism_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/uberon_import.owl>)
 
+Declaration(Class(<http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/COB_0000502>))
+
+
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000019> (quality)
+
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000019> <http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/COB_0000502>)
 
 # Class: <http://purl.obolibrary.org/obo/CARO_0000003> (connected anatomical structure)
 
@@ -29,6 +37,19 @@ SubClassOf(<http://purl.obolibrary.org/obo/CARO_0000008> <http://purl.obolibrary
 # Class: <http://purl.obolibrary.org/obo/CARO_0000010> (anatomical boundary)
 
 SubClassOf(<http://purl.obolibrary.org/obo/CARO_0000010> <http://purl.obolibrary.org/obo/UBERON_0000466>)
+
+# Class: <http://purl.obolibrary.org/obo/PATO_0000001> (quality)
+
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000001> <http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/COB_0000502>)
+
+# Class: <http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/COB_0000502> (characteristic)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/COB_0000502> "Bill Duncan 2023-11-09:
+The IRI for this term (COB:0000502) is from cob-native.owl. There is an open issue in COB on whether to use native IRIs or external onotlogy IRIs.  
+See: https://github.com/OBOFoundry/COB/issues/244
+
+This class was added manually to serve a a top-level class for qualities (e.g., BFO:qualtiy, PATO:qualty).")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/COB_0000502> "characteristic"@en)
 
 
 )

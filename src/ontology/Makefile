@@ -15,6 +15,7 @@ TEMPLATEDIR=                ../templates
 TMPDIR=                     tmp
 MIRRORDIR=                  mirror
 IMPORTDIR=                  imports
+SPARQLDIR=                  ../sparql
 
 TODAY ?=                    $(shell date +%Y-%m-%d)
 OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
@@ -30,7 +31,9 @@ RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-simple $(ONT)-non-clas
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
-IMPORTS =  omo ro uberon uberon_filter uberon_mireot uberon_subset fovt organism bspo bco
+IMPORTS =  \
+	omo ro uberon uberon_filter uberon_mireot \
+	uberon_subset fovt organism bspo bco characteristic
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -110,6 +113,39 @@ $(IMPORTDIR)/organism_import.owl: $(MIRRORDIR)/fovt.owl
 		--version-iri $(URIBASE)/$(ONT)/$@ \
 	  convert --format ofn \
 	  --output $@.tmp.owl && mv $@.tmp.owl $@
+
+## CHARACTERISIC (extacted from FOVT)
+# $(IMPORTDIR)/characteristic_import.owl: $(MIRRORDIR)/fovt.owl $(IMPORTDIR)/characteristic_terms.txt
+# 	$(ROBOT) \
+# 	    extract --method TOP \
+# 			--input $< \
+# 			--term-file $(word 2, $^) \
+# 		remove \
+# 			--select "owl:deprecated='true'^^xsd:boolean" \
+# 	    annotate \
+# 			--annotate-defined-by true \
+# 			--ontology-iri $(URIBASE)/$(ONT)/$@ \
+# 			--version-iri $(URIBASE)/$(ONT)/$@ \
+# 		convert --format ofn \
+# 		--output $@.tmp.owl && mv $@.tmp.owl $@
+
+$(IMPORTDIR)/characteristic_import.owl: $(MIRRORDIR)/fovt.owl $(IMPORTDIR)/characteristic_terms.txt
+	$(ROBOT) \
+	    filter \
+			--input $< \
+			--term-file $(word 2, $^) \
+			--select "annotations self descendants" \
+			--axioms logical \
+			--signature true \
+			--trim true \
+		remove \
+			--select "owl:deprecated='true'^^xsd:boolean" \
+	    annotate \
+			--annotate-defined-by true \
+			--ontology-iri $(URIBASE)/$(ONT)/$@ \
+			--version-iri $(URIBASE)/$(ONT)/$@ \
+		convert --format ofn \
+		--output $@.tmp.owl && mv $@.tmp.owl $@
 
 ## BSPO
 $(IMPORTDIR)/bspo_import.owl: $(MIRRORDIR)/bspo.owl $(IMPORTDIR)/bspo_terms.txt
@@ -237,10 +273,27 @@ $(MIRRORDIR)/%.owl:
 # Queries
 # ----------------------------------------
 
-.PHONY: bspo_caro_terms
+.PHONY: bspo_caro_terms query-%
 # used to help retrieve the terms list for bspo_terms.txt
 bspo_caro_terms:
 	$(ROBOT) \
 		query \
 		--input imports/bspo_import.owl \
 		--query ../sparql/bspo_caro_terms.sparql tmp/out.tsv 
+
+query-%:
+	@echo "*** query $* ***"
+	$(ROBOT) \
+		query  \
+		--input imports/bspo_import.owl \
+		--query $(SPARQLDIR)/$* tmp/$*_results1.tsv
+	
+	@echo "** remove double quotes from tmp/$*_results1.tsv"
+	sed 's/\"//g' tmp/$*_results1.tsv > tmp/$*_results2.tsv
+
+	@echo "** remove first line from tmp/$*_results2.tsv"
+	tail -n +2 tmp/$*_results2.tsv > tmp/$*_results.tsv
+
+	@echo "** clean up"
+	rm -f $*_results1.tsv
+	rm -f $*_results2.tsv

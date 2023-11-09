@@ -1,0 +1,31 @@
+# relations
+BFO:0000050   # part of
+BFO:0000051   # has part
+RO:0002314    # characteristic of part of
+RO:0000052    # inheres in (characteristic of)
+RO:0000053    # has characteristic
+RO:0015006    # different in magnitude relative to
+RO:0015007    # increased in magnitude relative to
+BSPO_0000123  # in anterior side of
+BSPO_0030004  # anteriormost part of
+BSPO_0020001  # in central side of
+BSPO_0000125  # in distal side of
+BSPO_0001108  # distalmost part of
+BSPO_0015101  # in dorsal side of
+BSPO_0030003  # dorsalmost part of
+BSPO_0000126  # in lateral side of
+BSPO_0000120  # in left side of
+BSPO_0000121  # in right side of
+BSPO_0030005  # lateralmost part of
+BSPO_0030006  # in medial side of
+BSPO_0030007  # medialmost part of
+BSPO_0000122  # in posterior side of
+BSPO_0000124  # in proximal side of
+BSPO_0001106  # proximalmost part of
+BSPO_0005001  # intersects midsagittal plane of
+BSPO_0015002  # follows axis
+BSPO_0015001  # finishes axis
+
+# top classes to extracted
+BFO:0000019   # BFO quality
+PATO:0000001  # PATO quality
