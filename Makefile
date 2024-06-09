@@ -16,7 +16,7 @@ endif
 # generate documentation
 	gen-doc -d $(DOCDIR) $(SOURCE_SCHEMA_DIR)/trait-value.yml
 
-clean-artifacts:
+clean-products:
 # don't delete README files
 	find jsonschema/ -type f -not -name 'README.md' -delete     
 	find jsonld/ -type f -not -name 'README.md' -delete     
