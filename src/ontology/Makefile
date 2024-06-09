@@ -31,13 +31,13 @@ all:
 	$(MAKE) $(PRODUCTS) 
 
 release: all
-	@echo "--- copying $(foreach p, $(PRODUCTS), $(p)) $(PRODUCTS) to $(RELEASEDIR) ---"
+	@echo "--- copying $(PRODUCTS) to $(RELEASEDIR) ---"
 	rsync -R $(PRODUCTS) $(RELEASEDIR)
 
 # ----------------------------------------
 # Products released
 # ----------------------------------------
-PRODUCTS = $(ONT).owl
+PRODUCTS = $(ONT).owl $(ONT).ttl
 
 $(ONT).owl: $(ONT)-full.owl
 	@echo "--- building $@ ---"
@@ -45,6 +45,13 @@ $(ONT).owl: $(ONT)-full.owl
 		annotate --input $< \
 			--ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
+
+$(ONT).ttl: $(ONT).owl
+	@echo "--- building $@ ---"
+	$(ROBOT) \
+		convert -i $< -o $@.tmp.ttl && mv $@.tmp.ttl $@
+
+
 
 # -----------------------------------------------------
 # Product variants (base, full, simple, etc)

@@ -14,6 +14,8 @@ Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/omo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/organism_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/fovtTEST/imports/uberon_import.owl>)
+Annotation(<http://purl.org/dc/terms/description> "Testing ways to restructure the FuTRES Ontology of Vertebrate Traits (FOVT).")
+Annotation(<http://purl.org/dc/terms/title> "FuTRES Ontology of Vertebrate Traits")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/COB_0000502>))
 
