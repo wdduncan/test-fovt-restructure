@@ -14,4 +14,4 @@ ifneq ($(wildcard src/docs/images/*.*),)
 	cp src/docs/images/*.* docs/images 
 endif
 # generate documentation
-	gen-doc -d $(DOCDIR) $(SOURCE_SCHEMA_DIR)/trait-value.yml
+	pylode -o $(DOCDIR)/FOVT.html fovtTEST.ttl
