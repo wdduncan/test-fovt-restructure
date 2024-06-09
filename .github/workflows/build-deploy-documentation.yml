@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - 'mkdocs.yml'
-      - src/schema/trait-value.yml
+      - 'fovtTEST.ttl'
       - 'src/docs/*.md'
       - 'src/docs/*.html'
       - 'docs/images/*'
@@ -43,7 +43,7 @@ jobs:
           pip install mkdocs-techdocs-redirects
           pip install mkdocs-material
           pip install mkdocs-section-index
-          pip install linkml
+          pip install pylode
 
       - name: Build and deploy documentation.
         run: |
