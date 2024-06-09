@@ -14,7 +14,7 @@ ifneq ($(wildcard src/docs/images/*.*),)
 endif
 
 # generate documentation
-	gen-doc -d $(DOCDIR) $(SOURCE_SCHEMA_DIR)/*.yml
+	gen-doc -d $(DOCDIR) $(SOURCE_SCHEMA_DIR)/trait-value.yml
 
 clean-artifacts:
 # don't delete README files
