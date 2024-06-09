@@ -24,9 +24,45 @@ ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --anno
 OTHER_SRC =                 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 
-FORMATS = $(sort  owl owl)
-FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
-RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-simple $(ONT)-non-classified $(ONT)-base $(ONT)-full)
+.PHONY: all release 
+# in order to get make all -B to work I had to use $(MAKE) $(PRODUCTS)
+# I don't know why ...
+all:
+	$(MAKE) $(PRODUCTS) 
+
+release: all
+	@echo "--- copying $(foreach p, $(PRODUCTS), $(p)) $(PRODUCTS) to $(RELEASEDIR) ---"
+	rsync -R $(PRODUCTS) $(RELEASEDIR)
+
+# ----------------------------------------
+# Products released
+# ----------------------------------------
+PRODUCTS = $(ONT).owl
+
+$(ONT).owl: $(ONT)-full.owl
+	@echo "--- building $@ ---"
+	$(ROBOT) \
+		annotate --input $< \
+			--ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		convert -o $@.tmp.owl && mv $@.tmp.owl $@
+
+# -----------------------------------------------------
+# Product variants (base, full, simple, etc)
+# -----------------------------------------------------
+
+# Full: The full artefacts with imports merged, reasoned
+$(ONT)-full.owl: $(SRC) $(OTHER_SRC) $(IMPORT_FILES)
+	@echo "--- building $@ ---"
+	$(ROBOT) \
+		merge --input $< \
+		reason --reasoner elk \
+			--equivalent-classes-allowed asserted-only \
+			--exclude-tautologies structural \
+		relax \
+		reduce -r elk \
+		annotate --ontology-iri $(ONTBASE)/$@ \
+		$(ANNOTATE_ONTOLOGY_VERSION) \
+		--output $@.tmp.owl && mv $@.tmp.owl $@
 
 # ----------------------------------------
 # Import modules
