@@ -5,7 +5,9 @@ on:
       - main
     paths:
       - 'mkdocs.yml'
-      - 'docs/*'
+      - src/schema/trait-value.yml
+      - 'src/docs/*.md'
+      - 'src/docs/*.html'
       - 'docs/images/*'
   workflow_dispatch:
   
@@ -46,6 +48,7 @@ jobs:
       - name: Build and deploy documentation.
         run: |
           mkdir -p docs
+          mdir -p docs/images
           touch docs/.nojekyll
           make gendoc
           mkdocs gh-deploy --force
