@@ -14,4 +14,9 @@ ifneq ($(wildcard src/docs/images/*.*),)
 	cp src/docs/images/*.* docs/images 
 endif
 # generate documentation
-	pylode -o $(DOCDIR)/index.html fovtTEST.ttl
+# for pyLODE to show the definitions replace obo:obo:IAO_0000115 "..." with skos:definition "..."
+# and similarlyt replace elucidations (IAO_0000600) with skos:definition
+	mkdir -p tmp
+	sed 's@obo:IAO_0000115 \"@skos:definition \"@g' fovtTEST.ttl | \
+	sed 's@obo:IAO_0000600 \"@skos:definition \"@g' > tmp/temp.ttl
+	pylode -o $(DOCDIR)/index.html tmp/temp.ttl
