@@ -14,4 +14,4 @@ ifneq ($(wildcard src/docs/images/*.*),)
 	cp src/docs/images/*.* docs/images 
 endif
 # generate documentation
-	pylode -o $(DOCDIR)/FOVT.html fovtTEST.ttl
+	pylode -o $(DOCDIR)/index.html fovtTEST.ttl
